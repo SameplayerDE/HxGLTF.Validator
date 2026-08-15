@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>H073.HxGLTF.Validator</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Sameplayer</Authors>
+    <Description>Pure C# port of the Khronos glTF-Validator: validates glTF 2.0 / GLB files with the same issue codes, messages and JSON report format as the reference validator, plus a wrapper for the official binary and integration with HxGLTF.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageTags>gltf;glb;validator;validation;khronos;3d</PackageTags>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/SameplayerDE/HxGLTF.Validator</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/SameplayerDE/HxGLTF.Validator</PackageProjectUrl>
+    <NoWarn>$(NoWarn);CA1051;CA1707;CA1720;CA1711;CA1002;CA1034;CA1815;CA1819</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="H073.HxGLTF" Version="3.0.0" />
+    <None Include="docs\README.md" Pack="true" PackagePath="\" />
+    <None Include="docs\NOTICE.md" Pack="true" PackagePath="\" />
+    <None Include="..\icon.png" Pack="true" PackagePath="" />
+    <InternalsVisibleTo Include="HxGLTF.Validator.Tests" />
+  </ItemGroup>
+
+</Project>

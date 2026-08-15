@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="HxGLTF.Validator/HxGLTF.Validator.csproj" />
+  <Project Path="HxGLTF.Validator.Tests/HxGLTF.Validator.Tests.csproj" />
+</Solution>

@@ -1,0 +1,37 @@
+<!--
+  KaiserLib root build defaults.
+
+  Properties set here are loaded BEFORE each project's .csproj, so any explicit values
+  inside an individual csproj override what's set here. This is intentionally conservative —
+  we set only safe baselines so adding the file to an existing tree is non-breaking.
+
+  To opt into stricter rules per-project, add inside the csproj:
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+-->
+<Project>
+
+  <PropertyGroup>
+    <!-- Language baseline. Hx-tier libraries should use C# latest. -->
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <!-- Enable the latest recommended built-in analyzers. Reports as warnings, not errors. -->
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+
+    <!-- Common package metadata defaults. Individual projects override Description/PackageId/Version. -->
+    <Authors>Sameplayer</Authors>
+    <Company>Sameplayer</Company>
+    <Copyright>Copyright © Sameplayer</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+
+    <!-- Deterministic builds — same source produces byte-identical assemblies. Helps inc. build caching. -->
+    <Deterministic>true</Deterministic>
+
+    <!-- Allow the diagnostics infrastructure to ship XML doc IDs even when individual projects
+         opt out of producing the .xml file. -->
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+
+</Project>
