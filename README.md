@@ -13,7 +13,7 @@ dotnet add package H073.HxGLTF.Validator
 ```
 
 Build from source: `dotnet build` and `dotnet test` in the repository root (the tests run the full Khronos corpus).
-The library depends on the `H073.HxGLTF` loader package (https://github.com/SameplayerDE/KaiserLib).
+The library depends on the `H073.HxGLTF` loader package ([HxGLTF NuGet Link](https://www.nuget.org/packages/H073.HxGLTF/#readme-body-tab)).
 
 ## Getting started
 
